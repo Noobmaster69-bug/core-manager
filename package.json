@@ -1,0 +1,35 @@
+{
+  "name": "core-manager",
+  "version": "1.0.0",
+  "description": "Microservice manager for IoT Gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noobmaster69-bug/core-manager.git"
+  },
+  "keywords": [
+    "Microservice",
+    "manager",
+    "IoT",
+    "Gateway",
+    "IoT"
+  ],
+  "author": "Uy Son Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noobmaster69-bug/core-manager/issues"
+  },
+  "homepage": "https://github.com/Noobmaster69-bug/core-manager#readme",
+  "dependencies": {
+    "debug": "^4.3.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "pm2": "^5.2.0"
+  }
+}
