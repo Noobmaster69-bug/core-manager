@@ -10,8 +10,6 @@ module.exports = function (command, option) {
       if (code === 0) {
         resolve();
       } else {
-        console.log(code);
-        console.log(typeof code);
         reject();
       }
     });

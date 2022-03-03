@@ -9,8 +9,6 @@ module.exports = function (command, param, option) {
       if (code === 0) {
         resolve();
       } else {
-        console.log(code);
-        console.log(typeof code);
         reject();
       }
     });

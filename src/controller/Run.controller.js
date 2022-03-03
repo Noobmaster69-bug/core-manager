@@ -28,6 +28,9 @@ module.exports = {
         /^win/.test(process.platform) ? "pm2.cmd" : "pm2",
         ["start", "index.js", "--name", service],
         {
+          env: {
+            dev: "true",
+          },
           cwd: "../" + service,
         }
       );

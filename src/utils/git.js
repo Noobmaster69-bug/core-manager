@@ -2,7 +2,6 @@ const spawn = require("child_process").spawn;
 
 const gitExec = (command, option) =>
   new Promise((resolve, reject) => {
-    console.log("duubg");
     const thread = spawn("git", command, {
       ...option,
       stdio: ["inherit", "inherit", "inherit"],
@@ -22,8 +21,6 @@ const gitExec = (command, option) =>
       if (code === 0) {
         resolve();
       } else {
-        console.log(code);
-        console.log(typeof code);
         reject();
       }
     });
