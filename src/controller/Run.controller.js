@@ -24,16 +24,18 @@ module.exports = {
   startAll: async function (req, res) {
     let Installed = List.Installed().filter((e) => e !== "core-manager");
     for (const service of Installed) {
-      await spawn(
-        /^win/.test(process.platform) ? "pm2.cmd" : "pm2",
-        ["start", "index.js", "--name", service],
-        {
-          env: {
-            dev: "true",
-          },
-          cwd: "../" + service,
-        }
-      );
+      try{
+
+        await spawn(
+          /^win/.test(process.platform) ? "pm2.cmd" : "pm2",
+          ["start", "index.js", "--name", service, "--wait-ready"],
+          {
+            cwd: '../' + service,
+          }
+        );
+      }catch(err){
+        console.log(err)
+      }
     }
     res.sendStatus(200);
   },

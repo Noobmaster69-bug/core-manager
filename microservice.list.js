@@ -1,11 +1,12 @@
 module.exports = {
   list: [
-    "as-mqtt",
-    "core-command",
-    "core-manager",
     "core-metadata",
-    "core-scheduler",
+    "core-manager",
+    "as-mqtt",
     "ds-modbus",
+    "core-command",
+    "core-scheduler",
+
   ],
   repo: [
     "https://github.com/Noobmaster69-bug/as-mqtt.git",

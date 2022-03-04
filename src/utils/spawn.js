@@ -4,12 +4,12 @@ module.exports = function (command, param, option) {
     const thread = spawn(command, param, {
       ...option,
       stdio: ["inherit", "inherit", "inherit"],
-    });
+    }).on("error", (err) => console.log(err));
     thread.on("close", (code) => {
       if (code === 0) {
-        resolve();
+        resolve(code);
       } else {
-        reject();
+        reject(code);
       }
     });
   });
